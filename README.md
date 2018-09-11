@@ -3,13 +3,35 @@ Except site for 2018.
 
 ## Usage
 
-### Setting up local environment
-*Requirements:*
+### Requirements
 * MacOS 10.10.x
-* Python 3.6 or higher
+* Python 3.6
+* Node v8.11.x
+* NPM 5.6.x
 
 ## Run Wagtail on your local machine
-In a terminal navigate to the project root, and run:
+First, from a terminal window, clone this repository somewhere on your hard drive.  
+```
+git clone git@github.com:heidilaw4/gray-unicorn.git
+```
+Then navigate to the project root and run:
 ```
 python3 manage.py runserver
 ```
+For viewing the website, navigate to:
+```
+http://localhost:8000
+```
+
+For the admin login page, navigate to:
+```
+http://localhost:8000/admin
+```
+Default credentials are `admin:exceptdev123`
+
+## Run SASS watcher & builder
+In a terminal window navigate to the project root, and run:
+```
+python3 manage.py bulma start
+```
+You'll find the rebuilt CSS file in `except/static/bulma/css/style.css`
