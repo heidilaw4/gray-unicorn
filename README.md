@@ -5,6 +5,7 @@ Except site for 2018.
 
 ### Requirements
 * MacOS 10.10.x
+* GIT
 * Python 3.6
 * Node v8.11.x
 * NPM 5.6.x
@@ -16,6 +17,8 @@ git clone git@github.com:heidilaw4/gray-unicorn.git
 ```
 Then navigate to the project root and run:
 ```
+pip install -r requirements.txt
+python manage.py migrate
 python3 manage.py runserver
 ```
 For viewing the website, navigate to:
