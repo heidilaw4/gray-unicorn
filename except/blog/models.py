@@ -48,8 +48,6 @@ class BlogPage(Page):
 	intro = models.CharField(max_length=250)
 	body = RichTextField(blank=True)
 	tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
-	author_name = models.ForeignKey(Author, 
-		blank=True, null=True, on_delete=models.SET_NULL)
 
 	def main_image(self):
 		galler_item = self.gallery_images.first()
@@ -71,7 +69,6 @@ class BlogPage(Page):
 		FieldPanel('intro'),
 		FieldPanel('body', classname="full"),
 		InlinePanel('gallery_images', label="Gallery images"),
-		FieldPanel('author_name'),
 	]
 
 class BlogPageGalleryImage(Orderable):
