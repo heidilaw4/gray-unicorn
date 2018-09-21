@@ -1,17 +1,18 @@
-FROM python:3.6
+FROM python:3.7
 LABEL maintainer="hello@wagtail.io"
 
 ENV PYTHONUNBUFFERED 1
 ENV DJANGO_ENV dev
 
 COPY ./requirements.txt /code/requirements.txt
-RUN pip install -r /code/requirements.txt
-RUN pip install gunicorn
+RUN pip3 install -r /code/requirements.txt
+RUN pip3 install gunicorn
 
 COPY . /code/
 WORKDIR /code/
 
-RUN python manage.py migrate
+CD except
+RUN python3 manage.py migrate
 
 RUN useradd wagtail
 RUN chown -R wagtail /code
