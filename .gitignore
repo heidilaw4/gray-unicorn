@@ -1,4 +1,10 @@
 __pycache__/
 __init__.py
 migrations/
-*.png
+*.pyc
+.DS_Store
+*.swp
+/venv/
+/static/
+/media/
+.env
