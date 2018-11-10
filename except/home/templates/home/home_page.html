@@ -5,5 +5,16 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
-    {{ page.body|richtext }}
+
+<div class="card is-shady">
+    <div class="card-image has-text-centered">
+        <i class="fa fa-paw"></i>
+    </div>
+    <div class="card-content">
+        <div class="content">
+            {{ page.body|richtext }}
+        </div>
+    </div>
+</div>
+
 {% endblock %}
