@@ -1,0 +1,25 @@
+h1,h2,h3,h4 {
+  font-family: 'AllerBold';
+
+  &:before {
+    content: '';
+    border-top: solid 8px black;
+    width: 150px;
+    position: absolute;
+    left: 0;
+    top: -12px;
+
+    .hero & {
+      border-color: white;
+    }
+  }
+}
+
+h1 {font-size: 30pt}
+h2 {font-size: 24pt}
+h3 {font-size: 18pt}
+h4 {font-size: 14pt}
+
+p + .button {
+  margin-top: $spacing-md;
+}

@@ -1,0 +1,15 @@
+// Settings
+@import 'utils/variables';
+@import 'utils/helpers';
+@import 'utils/fonts';
+@import 'utils/typography';
+
+// Components
+@import 'components/navigation';
+@import 'components/hero';
+@import 'components/buttons';
+@import 'components/forms';
+
+section + section {
+  margin-top: 2em;
+}

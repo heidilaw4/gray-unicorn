@@ -36,7 +36,7 @@
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
-              <img src="{% static 'asset/logo.png' %}" >
+              <img src="{% static 'images/logo.png' %}" >
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -48,28 +48,28 @@
 
           <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-              <a class="navbar-item">
+              <a href="/" class="navbar-item">
                 Home
               </a>
 
-              <a class="navbar-item">
+              <a href="/project" class="navbar-item">
                 Projects
               </a>
 
-              <a class="navbar-item">
+              <a href="/knowledge" class="navbar-item">
                 Knowledge
               </a>
 
               <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
+                <a href="/about" class="navbar-link">
                   About
                 </a>
 
                 <div class="navbar-dropdown">
-                  <a class="navbar-item">
+                  <a href="/people" class="navbar-item">
                     People
                   </a>
-                  <a class="navbar-item">
+                  <a href="/contact" class="navbar-item">
                     Contact
                   </a>
                 </div>

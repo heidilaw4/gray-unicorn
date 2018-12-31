@@ -1,0 +1,183 @@
+.debug {
+  border: solid 1px #f00;
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.block, .hero .intro {
+  padding: 2rem;
+}
+
+@font-face {
+  font-family: "Aller";
+  src: url("../fonts/Aller_Lt.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AllerBold";
+  src: url("../fonts/Aller_Bd.ttf") format("truetype");
+}
+h1, h2, h3, h4 {
+  font-family: "AllerBold";
+}
+h1:before, h2:before, h3:before, h4:before {
+  content: "";
+  border-top: solid 8px black;
+  width: 150px;
+  position: absolute;
+  left: 0;
+  top: -12px;
+}
+.hero h1:before, .hero h2:before, .hero h3:before, .hero h4:before {
+  border-color: white;
+}
+
+h1 {
+  font-size: 30pt;
+}
+
+h2 {
+  font-size: 24pt;
+}
+
+h3 {
+  font-size: 18pt;
+}
+
+h4 {
+  font-size: 14pt;
+}
+
+p + .button {
+  margin-top: 2rem;
+}
+
+.navbar.is-fixed-top {
+  height: 48px;
+}
+.navbar.is-fixed-top .navbar-brand {
+  position: relative;
+  z-index: 2;
+  background: white;
+}
+.navbar.is-fixed-top .navbar-brand .logo {
+  max-height: calc(100% - .1em);
+}
+.navbar.is-fixed-top .navbar-menu {
+  display: block;
+  max-height: 0;
+  transition: height 0.2s ease-out;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0;
+}
+.navbar.is-fixed-top input.nav-toggle:checked ~ .navbar-menu {
+  display: block;
+  max-height: 100vh;
+}
+.navbar.is-fixed-top input.nav-toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+.navbar.is-fixed-top .navbar-start {
+  position: relative;
+}
+.navbar.is-fixed-top .navbar-item:hover {
+  color: #6C2A7E;
+  font-weight: normal;
+}
+.navbar.is-fixed-top .navbar-item.is-active {
+  border-left-width: 8px;
+  background-color: #eee;
+  color: #6C2A7E;
+  font-weight: bold;
+}
+.navbar.is-fixed-top .navbar-item label {
+  display: block;
+  cursor: pointer;
+  margin: -8px -12px;
+  padding: 8px 12px;
+}
+.navbar.is-fixed-top .navbar-item label:hover {
+  background: #f0f0f0;
+}
+.navbar.is-fixed-top .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+  pointer-events: none;
+}
+
+/* Laptop > */
+@media only screen and (min-width: 1088px) {
+  .navbar.is-fixed-top {
+    height: 100px;
+  }
+  .navbar.is-fixed-top .container > .navbar-menu {
+    display: flex;
+    transform: translate(0);
+    margin-left: 2em;
+    max-height: none;
+  }
+  .navbar.is-fixed-top .navbar-item {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .navbar.is-fixed-top .navbar-item.is-active {
+    border-left-width: 0;
+  }
+  .navbar.is-fixed-top .navbar-item.is-active:after {
+    content: "";
+    height: 8px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .navbar.is-fixed-top .navbar-item .navbar-menu {
+    max-width: 0;
+  }
+}
+.hero {
+  background-size: cover;
+  padding: 5rem 0;
+}
+.hero .title {
+  text-transform: uppercase;
+  color: white;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero .intro {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.hero.invert .title {
+  color: black;
+}
+.hero.invert .title:before {
+  border-color: black;
+}
+
+.button {
+  border-radius: 0;
+}
+
+.input + i {
+  margin-left: -1.6em;
+  position: relative;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+section + section {
+  margin-top: 2em;
+}
+
+/*# sourceMappingURL=bundle.css.map */
