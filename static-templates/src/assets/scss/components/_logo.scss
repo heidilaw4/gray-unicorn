@@ -1,0 +1,9 @@
+.logo {
+  height: 160px;
+  width: 240px;
+  transform-origin: left center;
+  
+  &.logo-invert {
+    fill: $color-text-invert;
+  }
+}

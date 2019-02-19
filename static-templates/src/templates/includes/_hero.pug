@@ -1,0 +1,14 @@
+section.hero.is-inverted.is-darkened(style=`background-image: url("${ heroImage }")`)
+  .hero-body
+    .container
+      .columns
+        .column
+          h1.h1.title=heroTitle || title
+          h3.h3.subtitle=heroSubtitle || ''
+          
+          if introText
+            .intro
+              p=introText
+          
+          button.button.is-primary.has-icon
+            i.fas.fa-chevron-down

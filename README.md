@@ -1,40 +1,20 @@
-# gray-unicorn
-Except site for 2018.
+# static-templates
+Front-end templates for the Except website 2019.
 
-## Usage
-
-### Requirements
+## Requirements
 * MacOS 10.10.x
-* GIT
-* Python 3.6
-* Node v8.11.x
-* NPM 5.6.x
+* GIT 2.18.x
+* Node v8.12.x
+* NPM 6.4.x
 
-## Run Wagtail on your local machine
-First, from a terminal window, clone this repository somewhere on your hard drive.  
-```
-git clone git@github.com:heidilaw4/gray-unicorn.git
-```
-Then navigate to the project root and run:
-```
-pip install -r requirements.txt
-python manage.py migrate
-python3 manage.py runserver
-```
-For viewing the website, navigate to:
-```
-http://localhost:8000
-```
+### Installation
+* From `static-templates`, run `npm install`
 
-For the admin login page, navigate to:
-```
-http://localhost:8000/admin
-```
-Default credentials are `admin:exceptdev123`
+### Development
+* From `static-templates`, run `npm start develop`.
+* For viewing the templates, go to your browser (best to use Chrome) and open `http://localhost:8080`
+* To get auto-update on changing files, install [Livereload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
+* Edit files in the `src` folder, don't modify the files in `dist`
 
-## Run SASS watcher & builder
-In a terminal window navigate to the project root, and run:
-```
-python3 manage.py bulma start
-```
-You'll find the rebuilt CSS file in `except/static/bulma/css/style.css`
+#### NOTES
+sometimes CSS files can be cached by the browser, to avoid this open the `Inspector` in your browser and in the settings, disable your cache.

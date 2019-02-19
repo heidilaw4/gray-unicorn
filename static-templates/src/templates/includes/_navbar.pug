@@ -1,0 +1,59 @@
+-
+  var menuItems = [
+    {title: 'Home',      path: './'},
+    {title: 'About',     path: './about',    dropdown: true},
+    {title: 'Services',  path: './services', dropdown: true},
+    {title: 'Projects',  path: './projects'},
+    {title: 'Knowledge', path: './knowledge'},
+  ]
+
+nav#mainNav.navbar.is-fixed-top.is-transparent
+  .container
+    .navbar-menu
+      .navbar-start
+        //- Logo
+        include _logo.pug
+      .navbar-end
+        .navbar-item
+          button.button.is-transparent
+            span='ENGLISH'
+            i.fas.fa-chevron-down
+        .navbar-item
+          a.button.is-transparent='CONTACT'
+
+nav.navbar.navbar-main.is-sticky(role='navigation' aria-label='main navigation')
+    .container
+      .navbar-menu
+
+        // Left menu
+        .navbar-start
+
+          // Navigation items
+          each item in menuItems
+            a.navbar-item(class=(title == item.title ? 'is-active' : '') href=item.path)
+              span=item.title
+
+              if item.dropdown
+                i.fas.fa-chevron-down
+
+        // Right menu
+        .navbar-end
+
+          // Search bar
+          .navbar-item
+            input.input(type='text' placeholder='Search site')
+            i.fas.fa-search
+      
+      // Dark website overlay      
+      label.overlay(for='headerNavToggle')
+
+
+//- label(for='aboutNavToggle')
+//-   span About
+//-   i.fas.fa-chevron-down
+//- input#aboutNavToggle.is-hidden.nav-toggle(type='checkbox')
+//- .navbar-menu
+//-   .navbar-start
+//-     a.navbar-item(href='/') What we do
+//-     a.navbar-item(href='/') Where we are
+//-     a.navbar-item(href='/') How to get in touch

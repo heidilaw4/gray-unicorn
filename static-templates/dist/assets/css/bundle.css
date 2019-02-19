@@ -1,0 +1,203 @@
+.debug, .no-flex {
+  border: solid 1px #f00;
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.dummy-block {
+  height: 1500px;
+}
+
+.is-fixed {
+  position: fixed;
+}
+
+.is-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+}
+
+.is-transparent {
+  background: transparent;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.no-flex {
+  flex: none;
+}
+
+@font-face {
+  font-family: "Aller";
+  src: url("../fonts/Aller_Lt.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AllerBold";
+  src: url("../fonts/Aller_Bd.ttf") format("truetype");
+}
+.logo {
+  height: 160px;
+  width: 240px;
+  transform-origin: left center;
+}
+.logo.logo-invert {
+  fill: #ffffff;
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  position: relative;
+  font-family: "AllerBold";
+  text-transform: uppercase;
+}
+
+.h1:before,
+.h2:before {
+  content: "";
+  border-top: solid 8px #231F20;
+  width: 150px;
+  position: absolute;
+  left: 0;
+  top: -1.8rem;
+}
+
+.h3,
+.h4 {
+  font-family: "Aller";
+}
+
+.h1 {
+  font-size: 38pt;
+}
+
+.h2 {
+  font-size: 24pt;
+}
+
+.h3 {
+  font-size: 18pt;
+}
+
+.h4 {
+  font-size: 14pt;
+}
+
+nav.navbar .navbar-start .navbar-item:first-child {
+  padding-right: 0;
+  margin-left: 0;
+}
+nav.navbar .navbar-end .navbar-item:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
+nav.navbar .navbar-end .navbar-item:last-child .button {
+  padding-right: 0;
+}
+nav.navbar.opaque {
+  background: black;
+}
+
+nav.navbar.navbar-main {
+  background: #E5E6E7;
+  height: 64px;
+}
+nav.navbar.navbar-main .navbar-item {
+  font-family: "Aller";
+  font-size: 1.1rem;
+  padding: 0;
+  margin: 0 1rem;
+  border: solid transparent;
+  border-width: 4px 0px;
+  text-transform: uppercase;
+}
+nav.navbar.navbar-main .navbar-item.is-active {
+  border-bottom-color: #231F20;
+}
+nav.navbar.navbar-main .navbar-item:hover {
+  background: none;
+  color: #231F20;
+  border-bottom-color: rgba(35, 31, 32, 0.5);
+}
+nav.navbar.navbar-main .navbar-item span + i {
+  margin-left: 0.5rem;
+}
+
+.hero {
+  background-position: center;
+  background-size: cover;
+  min-height: calc(100vh - 64px);
+  background-color: #E5E6E7;
+}
+.hero .hero-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+}
+.hero .title {
+  text-transform: uppercase;
+  color: #231F20;
+  display: inline-block;
+  font-weight: bold;
+  max-width: 50%;
+}
+.hero.is-inverted .button,
+.hero.is-inverted a {
+  color: #ffffff;
+}
+.hero.is-inverted .title {
+  color: #ffffff;
+}
+.hero.is-inverted .title:before {
+  border-color: #ffffff;
+}
+.hero.is-inverted .subtitle {
+  color: #ffffff;
+}
+.hero.is-darkened:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+.button {
+  font-size: 1.2rem;
+  font-family: "Aller";
+  text-transform: uppercase;
+  border-radius: 0;
+}
+.button.is-transparent {
+  border: none;
+  background: transparent;
+}
+.button.is-primary {
+  background: #6B2A7E;
+}
+.button.has-icon {
+  padding: 0 2.5rem;
+}
+.button span + i {
+  margin-left: 0.5rem;
+}
+
+.input + i {
+  margin-left: -1.6em;
+  position: relative;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.page {
+  margin: 2em 0;
+}
+
+/*# sourceMappingURL=bundle.css.map */

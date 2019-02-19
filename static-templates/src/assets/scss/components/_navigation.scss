@@ -1,0 +1,48 @@
+nav.navbar {
+  .navbar-start .navbar-item:first-child {
+    padding-right: 0;
+    margin-left: 0;
+  }
+
+  .navbar-end .navbar-item:last-child {
+    padding-right: 0;
+    margin-right: 0;
+
+    .button {
+      padding-right: 0;
+    }
+  }
+
+  &.opaque {
+    background:black;
+  }
+}
+
+nav.navbar.navbar-main {
+  background: $color-bg-block;
+  height: $height-nav;
+
+  .navbar-item {
+    font-family: 'Aller';
+    font-size: 1.1rem;
+    padding: 0;
+    margin: 0 1rem;
+    border: solid transparent;
+    border-width: 4px 0px;
+    text-transform: uppercase;
+
+    &.is-active {
+      border-bottom-color: $color-text;
+    }
+
+    &:hover {
+      background: none;
+      color: $color-text;
+      border-bottom-color: rgba($color-text, .5);
+    }
+
+    span + i {
+      margin-left: .5rem;
+    }
+  }
+}

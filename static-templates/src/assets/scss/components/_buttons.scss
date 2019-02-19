@@ -1,0 +1,23 @@
+.button {
+  font-size: 1.2rem;
+  font-family: 'Aller';
+  text-transform: uppercase;
+  border-radius: 0;
+
+  &.is-transparent {
+    border: none;
+    background: transparent;
+  }
+
+  &.is-primary {
+    background: $color-primary;
+  }
+
+  &.has-icon {
+    padding: 0 2.5rem;
+  }
+
+  span + i {
+    margin-left: .5rem;
+  }
+}

@@ -1,0 +1,15 @@
+// Settings
+@import 'utils/variables';
+@import 'utils/helpers';
+@import 'utils/fonts';
+
+// Components
+@import 'components/logo';
+@import 'components/typography';
+@import 'components/navigation';
+@import 'components/hero';
+@import 'components/buttons';
+@import 'components/forms';
+
+// Pages
+@import 'pages/home';

@@ -1,0 +1,25 @@
+- var title        = 'Home'
+//- - var invertLogo   = true
+- var heroImage    = 'assets/images/hero-home.jpg'
+- var heroTitle    = 'We make new futures possible'
+- var heroSubtitle = 'Leading sustainability consultants & designers'
+
+doctype html
+html
+  head
+    include includes/_head.pug
+
+  body.page-home
+    include includes/_hero.pug
+
+    include includes/_navbar.pug
+
+    img.page#innovation(src='assets/images/home-innovation.svg')
+    img.page#innovation(src='assets/images/home-global.svg')
+    img.page#innovation(src='assets/images/home-areas.svg')
+    img.page#innovation(src='assets/images/home-news.svg')
+    img.page#innovation(src='assets/images/footer.svg')
+
+    //- div.dummy-block
+
+script(src='assets/js/app.js')

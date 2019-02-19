@@ -1,0 +1,29 @@
+.debug {
+  border: solid 1px #f00;
+  background: rgba(red, .2);
+}
+
+.dummy-block {
+  height: 1500px;
+}
+
+.is-fixed {
+  position: fixed;
+}
+
+.is-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+}
+
+.is-transparent {
+  background: transparent;
+  color: $color-text-invert;
+  fill: $color-text-invert;
+}
+
+.no-flex {
+  flex: none;
+  @extend .debug;
+}
