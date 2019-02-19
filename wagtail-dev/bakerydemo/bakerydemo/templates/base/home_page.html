@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% load wagtailimages_tags wagtailcore_tags %}
+
+{% block content %}
+<div class="homepage">
+
+    {% image page.image fill-1920x600 as image %}
+
+
+    <section class="hero" style="background-image:url('{{ image.url }}')">
+    <div class="hero-body">
+        <div class="container">
+        <div class="columns">
+            <div class="column">
+            <h1 class="title">
+                    {{ page.title }}
+                </h1>
+                <div class="intro">
+                <p>
+                    {{ page.hero_text }}
+                </p>
+                {% if page.hero_cta_link %}
+                <a href="{% pageurl page.hero_cta_link %}" class="button is-primary">
+                    {{ page.hero_cta }}
+                </a>
+                    {% else %}
+                        {{ page.hero_cta }}
+                    {% endif %}
+                </p>
+            </div>
+            </div>
+            <div class="column">&nbsp;</div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section">
+        <header class="header">
+            <div class="container">
+                <h2>Projects</h2>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="columns">
+                
+                {% if page.promo_image or page.promo_title or page.promo_text %}
+                    <div class="column">
+                        <figure class="is-center">{% image page.promo_image fill-960x400-c100 %}</figure>
+                        <br/>
+                        <div>
+                            <h3>{{ page.promo_title }}</h3>
+                            {{ page.promo_text|safe }}
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <figure class="is-center">{% image page.promo_image fill-960x400-c100 %}</figure>
+                        <br/>
+                        <div>
+                            <h3>{{ page.promo_title }}</h3>
+                            {{ page.promo_text|safe }}
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <figure class="is-center">{% image page.promo_image fill-960x400-c100 %}</figure>
+                        <br/>
+                        <div>
+                            <h3>{{ page.promo_title }}</h3>
+                            {{ page.promo_text|safe }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                <!--div class="column">
+                    {% if page.featured_section_1 %}
+                    <h2>{{ page.featured_section_1_title }}</h2>
+                        <div class="featured-children">
+                            {% for childpage in page.featured_section_1.specific.children|slice:"4" %}
+                                <li>
+                                    <div class="row">
+                                            <a href="{{childpage.url}}">
+                                                <figure>
+                                                    {% image childpage.image fill-180x140-c100 %}
+                                                </figure>
+                                            </a>
+                                        
+                                        
+                                            <h3><a href="{{childpage.url}}">{{childpage.title}}</a></h3>
+                                        
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div-->
+                
+            </div>
+        </div>
+    </section>
+
+    {% if page.body %}
+    <div class="container-fluid streamfield">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 streamfield-column">
+                    {{ page.body }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 feature-2">
+                {% if page.featured_section_2 %}
+                <h2>{{ page.featured_section_2_title }}</h2>
+                    <div class="featured-children row feature-2-row">
+                        {% for childpage in page.featured_section_2.specific.children|slice:"3" %}
+                            <li class="col-sm-4 feature-2-item">
+                                <a href="{{childpage.url}}">
+                                    <figure>
+                                        {% image childpage.image fill-430x210-c100 %}
+                                    </figure>
+                                </a>
+                                <div class="feature-2-text">
+                                    <h3><a href="{{childpage.url}}">{{childpage.title}}</a></h3>
+                                    <p>{{ childpage.introduction|truncatewords:15 }}</p>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                {% if page.featured_section_3 %}
+                <h2>{{ page.featured_section_3_title }}</h2>
+                    <div class="featured-children row">
+                        {% for childpage in page.featured_section_3.specific.children|slice:"6" %}
+                            <li class="col-md-4">
+                                <a href="{{childpage.url}}">
+                                    <figure>
+                                        {% image childpage.image fill-430x254-c100 %}
+                                    </figure>
+                                    <h3>{{childpage.title}}</h3>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+</div> <!-- end homepage container -->
+{% endblock content %}

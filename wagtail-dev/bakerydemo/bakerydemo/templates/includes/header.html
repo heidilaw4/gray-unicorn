@@ -1,0 +1,114 @@
+{% load navigation_tags %}
+
+
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" id="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="/static/img/logo-compact.svg" width="30" height="30" class="logo is-hidden-tablet">
+            <img src="/static/img/logo.svg" width="120" height="35" class="logo is-hidden-mobile">
+        </a>
+    
+        <label class="navbar-burger burger" for="headerNavToggle">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </label>
+        </div>
+    
+        <!-- Hidden checkbox to toggle mobile menu -->
+        <input class="is-hidden nav-toggle" type="checkbox" id="headerNavToggle" />
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item">Home</a>
+        
+                <div class="navbar-item">
+                <label for="aboutNavToggle">
+                    <span>About</span>
+                    <i class="fas fa-chevron-down"></i>
+                </label>
+                <input class="is-hidden nav-toggle" type="checkbox" id="aboutNavToggle" />
+                <div class="navbar-menu">
+                    <div class="navbar-start">
+                    <a href="/" class="navbar-item">What we do</a>
+                    <a href="/" class="navbar-item">Where we are</a>
+                    <a href="/" class="navbar-item">How to get in touch</a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="navbar-item">
+                <label for="servicesNavToggle">
+                    <span>Services</span>
+                    <i class="fas fa-chevron-down"></i>
+                </label>
+                <input class="is-hidden nav-toggle" type="checkbox" id="servicesNavToggle" />
+                </div>
+
+                <div class="navbar-item">
+                <label for="projectsNavToggle">
+                    <span>Projects</span>
+                    <i class="fas fa-chevron-down"></i>
+                </label>
+                <input class="is-hidden nav-toggle" type="checkbox" id="projectsNavToggle" />
+                </div>
+
+                <div class="navbar-item">
+                <label for="knowledgeNavToggle">
+                    <span>Knowledge</span>
+                    <i class="fas fa-chevron-down"></i>
+                </label>
+                <input class="is-hidden nav-toggle" type="checkbox" id="knowledgeNavToggle" />
+                </div>
+            </div>
+        
+            <div class="navbar-end">
+                <div class="navbar-item">
+                
+
+                <form action="{% url 'search' %}" class="form-inline" method="get">    
+                    <input type="text" name="query" class="form-control" />
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-search"></i> Search
+                        </button>
+                    </div>
+                </form>
+                
+
+                </div>
+            </div>
+        </div>
+
+        <label class="overlay" for="headerNavToggle"></label>
+    </div>
+</nav>
+
+    
+            <!--div class="col-lg-12">
+                <a href="/" class="logo">Except</a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-label="Mobile menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                <form action="/search" method="get" class="search" role="search">
+                    <input name="q" type="text" placeholder="Search the site" aria-label="Search the site" autocomplete="off">
+                    <a href="#" class="search-icon">
+                        <i class="fa fa-search"></i>    
+                    </a>
+                </form>
+
+                {% block main_navigation %}
+                    <nav class="collapse navbar-collapse" id="main-navigation" role="navigation" aria-label="Primary site navigation">
+                        <ul class="nav nav-pills">
+                            {# main_menu is defined in base/templatetags/navigation_tags.py #}
+                            {% get_site_root as site_root %}
+                            {% top_menu parent=site_root calling_page=self %}
+                        </ul>
+                    </nav>
+                {% endblock %}
+            </div -->
