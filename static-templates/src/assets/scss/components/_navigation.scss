@@ -12,10 +12,13 @@ nav.navbar {
       padding-right: 0;
     }
   }
+}
 
+nav {
   &.opaque {
-    background:black;
+    background: black;
   }
+  z-index: 30;
 }
 
 nav.navbar.navbar-main {

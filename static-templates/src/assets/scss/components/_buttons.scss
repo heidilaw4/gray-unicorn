@@ -3,7 +3,7 @@
   font-family: 'Aller';
   text-transform: uppercase;
   border-radius: 0;
-
+  
   &.is-transparent {
     border: none;
     background: transparent;
@@ -13,6 +13,18 @@
     background: $color-primary;
   }
 
+  &.is-secondary {
+    color: $color-text-invert;
+    background: $color-secondary;
+    border: none;
+  }
+
+  &.is-next:after {
+    content: ' >';
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+
   &.has-icon {
     padding: 0 2.5rem;
   }
@@ -20,4 +32,25 @@
   span + i {
     margin-left: .5rem;
   }
+}
+
+p + .button,
+p + .buttons,
+.button + p,
+.buttons + p {
+  margin-top: 1em;
+}
+
+.button + .button {
+  margin-left: 1em;
+}
+
+.buttons.is-stretched {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // @extend .debug;
 }

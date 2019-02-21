@@ -7,19 +7,17 @@
     {title: 'Knowledge', path: './knowledge'},
   ]
 
-nav#mainNav.navbar.is-fixed-top.is-transparent
+nav#mainNav.is-fixed-top
   .container
-    .navbar-menu
-      .navbar-start
-        //- Logo
-        include _logo.pug
-      .navbar-end
-        .navbar-item
-          button.button.is-transparent
-            span='ENGLISH'
-            i.fas.fa-chevron-down
-        .navbar-item
-          a.button.is-transparent='CONTACT'
+      //- Logo
+      include _logo.pug
+      
+      .buttons.is-pulled-right.is-stretched
+        button.button.is-transparent
+          span='ENGLISH'
+          i.fas.fa-chevron-down
+      
+        a.button.is-transparent='CONTACT'
 
 nav.navbar.navbar-main.is-sticky(role='navigation' aria-label='main navigation')
     .container

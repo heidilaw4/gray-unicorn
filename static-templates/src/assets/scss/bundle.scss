@@ -4,12 +4,17 @@
 @import 'utils/fonts';
 
 // Components
+@import 'components/buttons';
+@import 'components/card';
+@import 'components/carousel';
+@import 'components/figure';
+@import 'components/footer';
+@import 'components/forms';
+@import 'components/hero';
+@import 'components/layout';
 @import 'components/logo';
 @import 'components/typography';
 @import 'components/navigation';
-@import 'components/hero';
-@import 'components/buttons';
-@import 'components/forms';
 
 // Pages
 @import 'pages/home';

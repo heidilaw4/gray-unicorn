@@ -4,6 +4,9 @@
 .h4 {
   position: relative;
   font-family: 'AllerBold';
+}
+
+.h1 {
   text-transform: uppercase;
 }
 
@@ -12,19 +15,47 @@
   &:before {
     content: '';
     border-top: solid 8px $color-text;
-    width: 150px;
+    width: 180px;
     position: absolute;
     left: 0;
     top: -1.8rem;
   }
 }
 
-.h3,
 .h4 {
   font-family: 'Aller';
 }
 
 .h1 {font-size: 38pt}
-.h2 {font-size: 24pt}
-.h3 {font-size: 18pt}
-.h4 {font-size: 14pt}
+.h2 {font-size: 22pt}
+.h3 {font-size: 16pt}
+.h4 {font-size: 13pt}
+
+a {
+  color: $color-text;
+}
+
+p {
+  max-width: 512px;
+}
+
+.is-inverted {
+  color: $color-text-invert;
+
+  .h1:before,
+  .h2:before,
+  .h3:before {
+    border-color: $color-text-invert;
+  }
+}
+
+span + i {
+  margin-left: .5em;
+}
+
+.h1 + p,
+.h2 + p,
+.h3 + p,
+.h4 + p {
+  margin-top: 1em;
+}

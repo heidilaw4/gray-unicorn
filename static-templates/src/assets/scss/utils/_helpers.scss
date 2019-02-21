@@ -27,3 +27,25 @@
   flex: none;
   @extend .debug;
 }
+
+.is-fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.is-red {
+  background:$color-alert;
+}
+
+.is-purple {
+  background: $color-primary;
+}
+
+.is-blue {
+  background: $color-info;
+}
+
+.is-green {
+  background: $color-success;
+}
