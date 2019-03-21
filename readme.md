@@ -1,16 +1,16 @@
-#Except Wagtail Edition
+# Except Wagtail Edition
 Migration project of the old Django based website to Wagtail
 
-##Links
+## Links
 - [Wagtail documentation](http://docs.wagtail.io)
 
-##Requirements
+## Requirements
 - NodeJS v8.12.0
 - NPM 6.4.1 or Yarn 1.10.1
 - Python 3.7
 - mySQL v8.0.12
 
-##How to run the website on your local machine
+## How to run the website on your local machine
 - Make sure you have your mySQL server running
 - Navigate to gray-unicorn in your terminal
 - Run the following commands:
