@@ -1,0 +1,23 @@
+{
+  "name": "except-static-templates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "There's no test command mapped yet.",
+    "scss": "sass --watch src/assets/scss/bundle.scss dist/assets/css/bundle.css",
+    "pug": "pug -P src/templates -w -o dist",
+    "serve": "http-server dist",
+    "livereload": "livereload .",
+    "develop": "concurrently --kill-others \"npm run pug\" \"npm run scss\" \"npm run livereload\" \"npm run serve\""
+  },
+  "author": "GizmoStudios",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "http-server": "^0.11.1",
+    "livereload": "^0.7.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.17.0"
+  }
+}

@@ -1,0 +1,130 @@
+nav {
+  background: $color-text-invert;
+
+  &.inverted {
+    .logo {
+      fill: $color-text-invert;
+    }
+
+    .buttons .button {
+      color: $color-text-invert;
+    }
+  }
+  &.opaque {
+    background: black;
+  }
+  &.is-compact {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    .container {
+      padding: 0;
+    }
+
+    .logo {
+      height: 60px;
+      width: 150px;
+    }
+
+    & ~ nav {
+      top: 90px;
+    }
+  }
+
+  z-index: 30;
+}
+
+nav.navbar {
+  .navbar-start .navbar-item:first-child {
+    padding-right: 0;
+    margin-left: 0;
+  }
+
+  .navbar-end .navbar-item:last-child {
+    padding-right: 0;
+    margin-right: 0;
+
+    .button {
+      padding-right: 0;
+    }
+  }
+
+  .navbar-item {
+    position: relative;
+
+    label + i {
+      margin-left: $spacing;
+    }
+
+    .dropdown {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      margin-top: 4px;
+
+      ul {
+        background: $color-primary;
+        width: 400px;
+        padding: 1em;
+
+        > li {
+          margin: 0;
+          padding: 0;
+
+          &:not(:last-child) {
+            border-bottom: solid 1px $color-text-invert;
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 0.5em 0;
+            color: $color-text-invert;
+
+            span {
+              flex: auto;
+            }
+
+            i {
+              flex: none;
+            }
+          }
+        }
+      }
+    }
+
+    input.for-dropdown:not(:checked) ~ .dropdown {
+      display: none;
+    }
+  }
+}
+
+nav.navbar.navbar-menu {
+  background: $color-bg-block;
+  height: $height-nav;
+  
+  .navbar-item {
+    font-family: 'Aller';
+    font-size: 1.1rem;
+    padding: 0;
+    margin: 0 1rem;
+    border: solid transparent;
+    border-width: 4px 0px;
+    text-transform: uppercase;
+
+    &.is-active {
+      border-bottom-color: $color-text;
+    }
+
+    &:hover {
+      background: none;
+      color: $color-text;
+      border-bottom-color: rgba($color-text, .5);
+    }
+
+    span + i {
+      margin-left: .5rem;
+    }
+  }
+}

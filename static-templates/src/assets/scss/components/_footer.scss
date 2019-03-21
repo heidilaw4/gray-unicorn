@@ -1,0 +1,22 @@
+.footer {
+  padding: 5em 0;
+  margin-bottom: 2em;
+  background: rgba($color-text,.7);
+
+  .h2, a {
+    color: $color-text-invert;
+
+    &:before {
+      border-color: $color-text-invert;
+    }
+  }
+
+  ul > li {
+    padding: 0;
+
+    &:before {
+      content: '> ';
+      color: rgba($color-text-invert, .5);
+    }
+  }
+}
