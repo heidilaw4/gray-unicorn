@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/bert/Projects/Except/website/except_wagtail"
+VIRTUAL_ENV="/Users/bert/Projects/Except/gray-unicorn/except_wagtail"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
