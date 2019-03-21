@@ -15,7 +15,7 @@ Migration project of the old Django based website to Wagtail
 - Navigate to gray-unicorn in your terminal
 - Run the following commands:
 ```
-python3 -m venv .
+virtualenv env -p python3
 source env/bin/activate
 cd except_wagtail
 pip3 install -r requirements.txt
