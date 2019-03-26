@@ -33,6 +33,6 @@ pip3 install -r requirements.txt
 
 - You can reach the admin on `localhost:8000/admin` with the default credentials:
 ```
-user: admin
+user: bert
 pass: bridgeoverWagtail1!
 ```
