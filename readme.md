@@ -23,12 +23,12 @@ pip3 install -r requirements.txt
 
 - The following line will add all the (new) models to the database
 ```
-./manage.py migrate
+python3 ./manage.py migrate
 ```
 
 - After migrations start the server, and open `localhost:8000` in your browser
 ```
-./manage.py runserver
+python3 ./manage.py runserver
 ```
 
 - You can reach the admin on `localhost:8000/admin` with the default credentials:
