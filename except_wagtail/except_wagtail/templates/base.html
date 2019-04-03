@@ -18,6 +18,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
+        <link rel="stylesheet" href="{% static 'css/vendor/bulma.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/except_wagtail.css' %}">
         <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
@@ -35,6 +36,8 @@
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/except_wagtail.js' %}"></script>
+        <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}
